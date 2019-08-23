@@ -1,0 +1,19 @@
+dos2out.c:315:17: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    while(in_cnt=fread(inbuf,1,PH_SECTSIZE,inf))
+          ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dos2out.c:315:17: note: place parentheses around the assignment to silence this warning
+    while(in_cnt=fread(inbuf,1,PH_SECTSIZE,inf))
+                ^
+          (                                    )
+dos2out.c:315:17: note: use '==' to turn this assignment into an equality comparison
+    while(in_cnt=fread(inbuf,1,PH_SECTSIZE,inf))
+                ^
+                ==
+1 warning generated.
+fsutils/minixfsutils.c:1451:9: error: use of undeclared identifier 'hd_img'
+  rpart(hd_img, 0, &part);
+        ^
+fsutils/minixfsutils.c:1453:23: error: use of undeclared identifier 'hd_img'
+  img_t img = (img_t)(hd_img + (part.start_sect * SSIZE));
+                      ^
+2 errors generated.

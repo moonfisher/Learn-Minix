@@ -1,0 +1,14 @@
+#display_library: win32,options="gui_debug"
+display_library: win32
+romimage: file="$BXSHARE/BIOS-bochs-latest"
+vgaromimage: file="$BXSHARE/VGABIOS-elpin-2.40"
+megs: 16
+floppya: 1_44="image", status=inserted
+#floppyb: 360k="rootfs.img", status=inserted
+#ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, mode=flat, path="c.img.old"
+#ata0-slave: type=disk, mode=flat, path="swap.img"
+boot: a
+#floppy_bootsig_check: disabled=1
+cpu: model=p4_willamette, count=1
+cpuid: mmx=1, simd=sse2
